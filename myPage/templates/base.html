@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{% block leaflet_requirements %}{% endblock %}
+<head>
+  <title>Oasissentials</title>
+  <meta charset="utf-8">
+
+  {% load leaflet_tags %}
+  {% load staticfiles %}
+
+  {% block leafletstyles %}{% endblock %}
+
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" type = "text/css"/> 
+  <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  
+</head>
+<body>
+	<script src="{% static 'jQuery/jquery-3.0.0.min.js' %}"></script>
+	<script src="{% static 'jQuery/jquery-ui-1.11.4.custom/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'jQuery/jquery-ui-touch-punch.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/base.js' %}"></script>
+
+<!-- <nav class="navbar navbar-inverse" style="background-color:#194d33;height:20px">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Page</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+        <li><a id="nav-login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-screenshot"></span> POI</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<div id="headerBOX">
+{% block headerBOX %}{% endblock %}
+</div>
+
+<div class='box-scene'>
+  <div class="navi box">
+    <div class='front face'>
+      <a class="spacer" href="/Sasha"> Sasha</a>
+      <a id="O-logo" class="spacer" href="/">
+        <img src="{% static 'images/OlOgO.png' %}"></a>
+      <a class="spacer" href="/Ozie"> Ozie</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="theThik">
+{% block main_content %}{% endblock %}
+</div>
+  
+</body>
+</html>
